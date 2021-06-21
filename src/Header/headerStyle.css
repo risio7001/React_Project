@@ -1,11 +1,120 @@
 .headerStyle{
     width: 100%;
+    margin: 0;
     height: 52px;
     background-color: rgba(255, 0, 0, 0);
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     transition: 0.5s;
 }
 .headerStyle:hover{
-    background-color: rgba(255, 0, 0, 1);
+    background-color: rgb(32, 35, 55);
+}
+.logo{
+    float: left;
+    width: 90px;
+    height: 52px;
+    background-color: black;
+    position: absolute;
+}
+.logo p{
+    color: white;
+    font-weight: bold;
+}
+.moreView{
+    float: left;
+    margin-top: 5px;
+    width: 80px;
+    height: 52px;
+    background-color: rgb(95, 93, 93, 0);
+    position: relative;
+}
+.moreView2{
+    width: 80vw;
+    height: 0px;
+    background-color: rgb(32, 35, 55);
+    position: absolute;
+    z-index: 4;
+    margin-top: 52px;
+    display: flex;
+    flex-direction: row;
+}
+.moreView0:hover .moreView2{
+    height: 300px;
+}
+
+.moreView0:hover .text{
+    opacity: 1;
+}
+
+.moreView0{
+    margin-left: 90px;
+    width: fit-content;
+    height: fit-content;
+}
+.text{
+    transition: 0.5s;
+    opacity: 0;
+    color: white;
+}
+
+.rightHeader{
+    float: right;
+    width: 100px;
+    height: 52px;
+    background-color: rgb(95, 93, 93, 0);
+    position: relative;
+    color: rgb(185, 181, 181);
+    
+}
+.leftHeader{
+    width: fit-content;
+    height: fit-content;
+}
+.tag{
+    transition: 0.1s;
+    color: white;
+}
+.tag:hover{
+    color: rgb(147, 161, 238);
+}
+.tag2{
+    transition: 0.1s;
+    color: white;
+    
+}
+.tag2:hover{
+    color: rgb(147, 161, 238);
+}
+.tag3{
+    transition: 0.1s;
+    color: white;
+    
+}
+.tag3:hover{
+    color: rgb(147, 161, 238);
+}
+.tag4{
+    transition: 0.1s;
+    color: white;
+    
+}
+.tag4:hover{
+    color: rgb(147, 161, 238);
+}
+.tag5{
+    transition: 0.1s;
+    color: white;
+    
+}
+.tag5:hover{
+    color: rgb(147, 161, 238);
+}
+.tag6{
+    transition: 0.1s;
+    color: white;
+    
+}
+.tag6:hover{
+    color: rgb(147, 161, 238);
 }

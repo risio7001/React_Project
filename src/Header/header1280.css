@@ -1,0 +1,179 @@
+.header1280{
+    width: 100vw;
+    height: 52px;
+    
+    background-color: rgb(32, 35, 55);
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+.header1280_left{
+    background-color: black;
+    width: 100px;
+    height: 52px;
+}
+.header1280_center{
+    background-color: rgba(0,0,0,0);
+    width: 200px;
+    height: 52px;
+}
+.header1280_right{
+    background-color: rgba(0,0,0,0);
+    width: 100px;
+    height: 52px;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.change{
+    display: inline-block;
+  cursor: pointer;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.categoryMore{
+    display: none;
+    width: 0;
+    height: 0;
+    background-color: black;
+    z-index: 4500;
+    position: relative;
+}
+.change_categoryMore{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: black;
+    z-index: 4500;
+}
+.categoryMore_Footer{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: red;
+    bottom: 0px;
+}
+
+.category1{
+    animation: 0.2s slide-right;
+}
+@keyframes slide-right {
+    from {
+       margin-left: -500px;
+    }
+    to {
+       margin-left: 0%;
+    }
+ }
+ .categoryMore_name{
+     width: 100%;
+     height: 65px;
+     text-align: left;
+     color: white;
+     font-size: 16px;
+     display: flex;
+     line-height: 4;
+     border-bottom:1px solid rgb(56,59,80);
+     padding: 0px 24px;
+     overflow-x: hidden;
+     cursor: pointer;
+ }
+ .login_container{
+     width: 100%;
+     height: 100px;
+     background-color: blue;
+ }
+ .download_container{
+    width: 100%;
+    height: 100px;
+    background-color: red;
+ }
+ .backPress{
+    color: white;
+    background-color: rgb(20,22,34);
+    height: 60px;
+    width: 100%;
+    line-height: 4;
+    text-align: left;
+    padding: 0px 24px;
+    transition:0.2s;
+    cursor:pointer;
+ }
+ .backPress:hover{
+    color:rgb(0, 157, 223)
+ }
+ .tag{
+     padding-right: 40px;
+     transition: 0.2s;
+     cursor: pointer;
+ }
+ .tag:hover{
+     color:rgb(0, 157, 223)
+ }
+ .tag2{
+     padding-right: 40px;
+     transition: 0.2s;
+     cursor: pointer;
+ }
+ .tag2:hover{
+     color:rgb(0, 157, 223)
+ }
+ .tag3{
+     padding-right: 40px;
+     transition: 0.2s;
+     cursor: pointer;
+ }
+ .tag3:hover{
+     color:rgb(0, 157, 223)
+ }
+ .tag4{
+     padding-right: 40px;
+     transition: 0.2s;
+     cursor: pointer;
+ }
+ .tag4:hover{
+     color:rgb(0, 157, 223)
+ }
+ .tag5{
+     padding-right: 40px;
+     transition: 0.2s;
+     cursor: pointer;
+ }
+ .tag5:hover{
+     color:rgb(0, 157, 223)
+ }
+ .tag6{
+     padding-right: 40px;
+     transition: 0.2s;
+     cursor: pointer;
+ }
+ .tag6:hover{
+     color:rgb(0, 157, 223)
+ }
+ a:visited { text-decoration: none; }
+ a:focus { text-decoration: none; }
+
+
+
+ 
