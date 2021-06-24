@@ -1,0 +1,47 @@
+.inputName{
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.inputName:focus{
+    padding: 20px;
+}
+
+.inputId{
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.inputId:focus{
+    padding: 20px;
+}
+
+.inputPass{
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.inputPass:focus{
+    padding: 20px;
+}
+
+.inputPass2{
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.inputPass2:focus{
+    padding: 20px;
+}
