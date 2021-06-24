@@ -15,6 +15,7 @@ import Product from './Categoty/product';
 import Solution from './Categoty/solution';
 import Study from './Categoty/study';
 import Support from './Categoty/support';
+import SignUp from './Contents/signUp'
 
 function App() {
   const [size, setSize] = useState();
@@ -59,6 +60,9 @@ function App() {
           <Route exact path="/Support">
             <Support />
           </Route>
+          <Route exact path="/SignUp">
+            <SignUp />
+          </Route>
         </>
       }
       else {
@@ -90,6 +94,9 @@ function App() {
           </Route>
           <Route exact path="/Support">
             <Support />
+          </Route>
+          <Route exact path="/SignUp">
+            <SignUp />
           </Route>
         </>
       }
@@ -126,6 +133,9 @@ function App() {
           <Route exact path="/Support">
             <Support />
           </Route>
+          <Route exact path="/SignUp">
+            <SignUp />
+          </Route>
         </>
       }
       else {
@@ -158,6 +168,9 @@ function App() {
           <Route exact path="/Support">
             <Support />
           </Route>
+          <Route exact path="/SignUp">
+            <SignUp />
+          </Route>
         </>
       }
     }
@@ -170,11 +183,11 @@ function App() {
   }, [reSize]);
 
   return (
-    <div className="App">
+    <div className="App" >
           <BrowserRouter>
             {headerSet()}
             {/* <Header size={size}/> */}
-          
+          {/* <Footer /> */}
           </BrowserRouter>
     </div>
   );
