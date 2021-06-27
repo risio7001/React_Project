@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import '../Header/headerStyle.css'
 import {text} from '../TextContents/totalText'
 import { Link } from 'react-router-dom';
+import {Auth} from '../firebase'
 // import mark from '../Image'
 
-function Header(){
+function Header({login}){
     const [scroll, setScroll]= useState("");
     const [test, setTest]=useState(0);
     let textContent = [];
@@ -73,9 +74,9 @@ function Header(){
                     }
                 </div>
             </div>
-            <Link to="/Login">
+            <Link to={login === undefined ? "/Login" : "/Info"}>
                 <div className="rightHeader">
-                    <p>로그인</p>
+                    {login == undefined ? <p>로그인</p> : <p>{login}</p>}
                 </div>
             </Link>
         </div>

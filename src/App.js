@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import MainPage from './Contents/mainPage'
-import MainPage1280 from './Contents/mainPage';
 import Header from './Header/header'
 import { isMobile, isBrowser } from 'react-device-detect';
 import Login from './Contents/login'
@@ -16,9 +15,12 @@ import Solution from './Categoty/solution';
 import Study from './Categoty/study';
 import Support from './Categoty/support';
 import SignUp from './Contents/signUp'
+import Info from './Contents/info'
 
-function App() {
+function App({props}) {
+  const [login, setLogin]=useState();
   const [size, setSize] = useState();
+
   function reSize() {
     if(window.innerWidth <=1280){
       setSize(true);
@@ -27,17 +29,18 @@ function App() {
       setSize(false);
     }
   }
+
   function headerSet(){
       // 페이지 사이즈를 바꿧을때
     if (size !== undefined) {
       if (size === true) {
         return <>
-          <Header1280 />
+          <Header1280 login={login}/>
           <Route exact path="/">
             <MainPage />
           </Route>
           <Route exact path="/Login">
-            <Login />
+            <Login setLogin={setLogin}/>
           </Route>
           <Route exact path="/Community">
             <Community />
@@ -62,17 +65,20 @@ function App() {
           </Route>
           <Route exact path="/SignUp">
             <SignUp />
+          </Route>
+          <Route exact path="/Info">
+            <Info />
           </Route>
         </>
       }
       else {
         return <>
-          <Header />
+          <Header login={login}/>
           <Route exact path="/">
             <MainPage />
           </Route>
           <Route exact path="/Login">
-            <Login />
+            <Login setLogin={setLogin}/>
           </Route>
           <Route exact path="/Community">
             <Community />
@@ -97,6 +103,9 @@ function App() {
           </Route>
           <Route exact path="/SignUp">
             <SignUp />
+          </Route>
+          <Route exact path="/Info">
+            <Info />
           </Route>
         </>
       }
@@ -105,12 +114,12 @@ function App() {
     else {
       if (window.innerWidth <= 1280) {
         return <>
-          <Header1280 />
+        <Header1280 login={login}/>
           <Route exact path="/">
             <MainPage />
           </Route>
           <Route exact path="/Login">
-            <Login />
+            <Login setLogin={setLogin}/>
           </Route>
           <Route exact path="/Community">
             <Community />
@@ -135,17 +144,20 @@ function App() {
           </Route>
           <Route exact path="/SignUp">
             <SignUp />
+          </Route>
+          <Route exact path="/Info">
+            <Info />
           </Route>
         </>
       }
       else {
         return <>
-          <Header />
+        <Header login={login}/>
           <Route exact path="/">
             <MainPage />
           </Route>
           <Route exact path="/Login">
-            <Login />
+            <Login setLogin={setLogin}/>
           </Route>
           <Route exact path="/Community">
             <Community />
@@ -170,6 +182,9 @@ function App() {
           </Route>
           <Route exact path="/SignUp">
             <SignUp />
+          </Route>
+          <Route exact path="/Info">
+            <Info />
           </Route>
         </>
       }

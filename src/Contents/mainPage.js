@@ -23,8 +23,6 @@ function MainPage() {
     }, [reSize]);
 
     const [translate, setTranslate]=useState();
-    console.log(document.documentElement.clientWidth);
-    console.log(window.innerWidth);
     const handleScroll = () => {
         setChangeView(true);
         setChangeW(window.innerWidth);
@@ -50,7 +48,7 @@ function MainPage() {
                         position: "sticky", top: "0px", width:document.documentElement.clientWidth, height: "100vh", transform:hundred < -1 ? "scale(0)" : `scale(${hundred})`,
                         transition: "0.2s", backgroundColor: "grey", opacity: hundred
                     }}>
-                        <video src={video1} muted autoPlay loop playsinline style={{width:"100%", height:"100%", objectFit:"fill"}}></video>
+                        <video src={video1} muted autoPlay loop style={{width:"100%", height:"100%", objectFit:"fill"}}></video>
                     </div>
                     {sizeWidth <= 1280 ? 
                     <div style={{marginTop:"50vh", padding:"0px 14px", lineHeight:"450%", width:"90vw", height:"300px", background:"rgba(0, 0, 0, 0)", zIndex:"3", position:"absolute", opacity:(1-(scroll/(changeH*0.3)))}}>

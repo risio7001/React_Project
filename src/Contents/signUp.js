@@ -1,25 +1,67 @@
 import React, { useEffect, useState } from 'react';
 import './signUp.css';
+import {Auth, DB} from '../firebase'
+import { Redirect, useHistory } from 'react-router-dom';
 
 function SignUp(){
-    const [name, setName]= useState();
-    const [id, setId]= useState();
-    const [pass, setPass]= useState();
-    const [pass2, setPass2]= useState();
-    const [click, setClick] = useState({name:"0", id:"0", password:"0", password2:"0"});
+    const [name, setName]= useState("");
+    const [id, setId]= useState("");
+    const [pass, setPass] = useState("");
+    const [pass2, setPass2] = useState("");
+    let history = useHistory();
 
-    useEffect(()=>{
-        console.log(click.name);
-    },[click]);
 
-    function onSubmit(event){
-        alert("NAME : " + name + "\n" + 
-        "ID : " + id + "\n" + 
-        "PASS : " + pass + "\n" + 
-        "PASS2 : " + pass2);
-        
+
+    function onSubmit(event) {
+        console.log("11111111111");
+        if(name === ""){
+            alert("이름을 입력해주세요");
+        }
+        else if(id === ""){
+            alert("이메일을 입력해주세요");
+        }
+        else if(pass === ""){
+            alert("비밀번호를 입력해주세요");
+        }
+        else if(pass2 === ""){
+            alert("비밀번호 확인란을 입력해주세요");
+        }
+        else if(pass.length < 6){
+            alert("비밀번호를 6자리 이상 입력해주세요.");
+        }
+        else if(pass !== pass2){
+            alert("비밀번호가 일치하지 않습니다.");
+        }
+        else{
+            Auth.createUserWithEmailAndPassword(id, pass)
+            .then((userCredential) => {
+                var user = userCredential.user;
+                let docRef = DB.collection("u_info").doc(user.uid);
+                docRef.set({
+                    uid : user.uid,
+                    name : name,
+                    email : user.email
+                });
+                // console.log("3333333333333333333 : "  + docRef.id);
+                // console.log(user);
+                history.push("/Login");
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log("222222222222222 : " + errorMessage);
+                console.log("44444444444444444 : " + errorCode);
+                // ..
+            });
+        alert("NAME : " + name + "\n" +
+            "ID : " + id + "\n" +
+            "PASS : " + pass + "\n" +
+            "PASS2 : " + pass2);
+        }
         event.preventDefault();
     }
+
+
     return<>
     <div style={{width:"100vw", height:"100vh", display:'flex', justifyContent:"center", flexDirection:"column", color:"white"}}>
         <div style={{display:"flex", justifyContent:"center"}}>
@@ -36,7 +78,7 @@ function SignUp(){
                         />
                         <input
                             placeholder="ID"
-                            type="text"
+                            type="email"
                             value={id}
                             onChange={(e)=>setId(e.target.value)}
                             className="inputId"
@@ -56,7 +98,7 @@ function SignUp(){
                             className="inputPass2"
                         />
                         <br/>
-                        <button value="Submit" style={{width:"80%", height:"50px", marginTop:"50px"}}>SignUp</button>
+                        <button value="Submit" style={{width:"80%", height:"50px", marginTop:"50px",border:"solid 1px grey", borderRadius:"10px"}}>SignUp</button>
                     </form>
                 </div>
             </div>

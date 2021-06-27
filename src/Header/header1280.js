@@ -3,9 +3,10 @@ import '../Header/header1280.css'
 import {text} from '../TextContents/totalText'
 import { Link } from 'react-router-dom';
 
-function Header1280(){
+function Header1280(login){
     const [scroll, setScroll]= useState("");
     const [test, setTest]=useState(0);
+    console.log("로그인 테스트1280 : " + login);
     let textContent = [];
     text.forEach(item=>{
         textContent.push({
@@ -60,17 +61,13 @@ function Header1280(){
     function categoryMore_Detail_Button(item){
         let data = [];
         data = text.find(({title}) => title == item.title);
-        console.log(data);
+        // console.log(data);
         if(categoryMore_Detail === "categoryMore_Detail"){
             setCategoryMore_Detail("change_categotyMore_Detail");
             setCategory_data(data);
         }else{
             setCategoryMore_Detail("categoryMore_Detail");
         }
-    }
-
-    function category_contents_setting(){
-
     }
 
 
