@@ -67,7 +67,7 @@ function App({props}) {
             <SignUp />
           </Route>
           <Route exact path="/Info">
-            <Info />
+            <Info setLogin={setLogin}/>
           </Route>
         </>
       }
@@ -105,7 +105,7 @@ function App({props}) {
             <SignUp />
           </Route>
           <Route exact path="/Info">
-            <Info />
+            <Info setLogin={setLogin}/>
           </Route>
         </>
       }
@@ -146,7 +146,7 @@ function App({props}) {
             <SignUp />
           </Route>
           <Route exact path="/Info">
-            <Info />
+            <Info setLogin={setLogin}/>
           </Route>
         </>
       }
@@ -184,7 +184,7 @@ function App({props}) {
             <SignUp />
           </Route>
           <Route exact path="/Info">
-            <Info />
+            <Info setLogin={setLogin}/>
           </Route>
         </>
       }
