@@ -4,10 +4,8 @@ import {Link, Redirect, useHistory} from 'react-router-dom'
 import './signUp.css';
 
 function Login(props){
-    const [test, setTest]=useState("");
     const [id, setId]=useState("");
     const [pass, setPass]=useState("");
-    const [send_name, setSend_name] = useState("");
 
     let history = useHistory();
     function onSubmit(event){
@@ -58,7 +56,7 @@ function Login(props){
             if (doc.exists) {
                 console.log("Document data:", doc.data().name);
                 props.setLogin(doc.data().name);
-                alert("로그인 성공 : " + user.providerData);
+                alert("로그인 성공 ");
                 history.push("/");
             } else {
                 console.log("No such document!");
