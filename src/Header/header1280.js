@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 function Header1280(login){
     const [scroll, setScroll]= useState("");
     const [test, setTest]=useState(0);
-    console.log("로그인 테스트1280 : " + login);
     let textContent = [];
     text.forEach(item=>{
         textContent.push({

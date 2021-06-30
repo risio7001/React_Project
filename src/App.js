@@ -20,7 +20,6 @@ import Info from './Contents/info'
 function App({props}) {
   const [login, setLogin]=useState();
   const [size, setSize] = useState();
-
   function reSize() {
     if(window.innerWidth <=1280){
       setSize(true);

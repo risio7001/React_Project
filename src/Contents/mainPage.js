@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './mainPage.css';
 import video1 from '../Image/mainvideo2.mp4';
-
+import img1 from '../Image/test1.png';
+import img2 from '../Image/test2.png';
 
 function MainPage() {
     const [changeW, setChangeW] = useState(window.innerWidth);
@@ -43,7 +44,7 @@ function MainPage() {
     }, [handleScroll]);
 
     return <>
-        <div style={{ position: "absolute", zIndex: "1", backgroundColor: "rgb(32,35,55)" }}>
+        <div style={{ position: "absolute",width: document.documentElement.clientWidth, zIndex: "1", backgroundColor: "rgb(32,35,55)" }}>
             <div style={{ width: document.documentElement.clientWidth, height: (window.innerHeight) * 1.5, display: "flex", justifyContent: "center", margin: "0px" }}>
                 <div style={{
                     position: "sticky", top: "0px", width: document.documentElement.clientWidth, height: "100vh", transform: hundred < -1 ? "scale(0)" : `scale(${hundred})`,
@@ -63,7 +64,6 @@ function MainPage() {
                             세계에서 가장 개방적이고 진보된 리얼타임 3D 제작 툴
                         </h1>
                     </div>}
-
             </div>
             {/* <div style={{ marginTop: "45vh", float: "left", transition: "0.4s", position: "absolute", zIndex: "4", width: "400px", height: "400px", backgroundColor: "black", opacity: ((changeH / 9) / scroll) - 1 }}></div> */}
             <div style={{ width: document.documentElement.clientWidth, height: "70vh", transition: "0.5s", backgroundColor: "rgb(219,222,227)", display: "flex", flexDirection: "column" }}>
@@ -73,7 +73,6 @@ function MainPage() {
                     <div style={{width:"70%"}}>언리얼 엔진을 사용하면 세계에서 가장 진보된 리얼타임 3D 제작 툴로 멋진 리얼타임 경험을 구현할 수 있습니다. 누구나 이용할 수 있는 무료 리소스와
                         영감을 주는 커뮤니티는 첫 번째 프로젝트부터 가장 까다로운 도전에 이르기까지 누구나 꿈을 이룰 수 있도록 지원합니다.</div>    
                     </div>
-                    
                 </div>
                 <div style={{ width: "100%", height: "50%", display: "flex", flexDirection: "row", justifyContent: "center", wordBreak: "keep-all" }}>
                     <div style={{ width: "90%", height: "100%", display: "flex", justifyContent: "space-between", opacity: scroll <= (changeH * 1) ? 0 : 1, transition: "0.5s" }}>
@@ -104,29 +103,65 @@ function MainPage() {
                     </div>
                 </div>
             </div>
-            <div style={{ width: document.documentElement.clientWidth, height: "90vh", transition: "0.5s", backgroundColor: "rgb(219,222,227)"
+            <div style={{ width: document.documentElement.clientWidth, height: "110vh", transition: "0.5s", backgroundColor: "rgb(219,222,227)"
             , display: "flex", flexDirection: "row", justifyContent:"center" }}>
-                <div style={{ width: "90%", height: "90%" }}>
+                <div style={{ width: "90%", height: "80%" }}>
+                    <div style={{
+                        display: "flex", width: "100%", height: "20%", opacity: scroll <= (changeH * 1.3) ? 0 : 1, transition: "0.5s",
+                        borderBottom: "1px solid black"}}>
+                        <div style={{ width: "50%", height: "100%", lineHeight:"4" }}>
 
-                    <div style={{display:"flex", width: "100%", height: "20%", opacity: scroll <= (changeH * 1.3) ? 0 : 1, transition: "0.5s" }}>
-                        <p>언리얼 엔진 최신 소식</p>
-                    </div>
-                    <div style={{display:"flex", width: "100%", height: "40%", opacity: scroll <= (changeH * 1.3) ? 0 : 1, transition: "0.5s" }}>
-                        <div style={{}}>
-
+                            <p style={{ fontSize: "35px", float:"left" }}>언리얼 엔진 최신 소식</p>
+                        </div>
+                        <div style={{width:"50%", height:"100%", display:"flex", flexDirection:"row-reverse"}}>
+                            <div className="test">
+                                <p style ={{color:"rgb(56,59,80)", fontSize:"13px"}}>
+                                    모든 뉴스 & 이벤트 보기
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div style={{display:"flex", width: "100%", height: "40%", opacity: scroll <= (changeH * 1.3) ? 0 : 1, transition: "0.5s" }}>
-                        <h1>언리얼 엔진 최신 소식</h1>
+                    <div style={{ display:"flex",flexDirection:"column",justifyContent:"center", width: "100%", height: "60%", opacity: scroll <= (changeH * 1.3) ? 0 : 1, transition: "0.5s" }}>
+                        <div className="mainPage_5_img_box_top">
+                            <div style={{width:"48%", height:"100%"}}>
+                                <img src={img1} width="100%" height="100%"/>
+                            </div>
+                            <div style={{width:"48%", height:"100%"}}>
+                            <img src={img2} width="100%" height="100%"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{  display:"flex",flexDirection:"row", justifyContent:"space-between", width: "100%", height: "40%",
+                     opacity: scroll <= (changeH * 1.3) ? 0 : 1, transition: "0.5s" }}>
+                        <div style={{ width:"48%", height:"100%", display:"flex", flexDirection:"column", textAlign:"left"}}>
+                            <p style={{ lineHeight:"0"}}>뉴스</p>
+                            <p className="mainPage_5_news_box_title">언리얼 엔진 5 얼리 액세스 출시!</p>
+                            <p style={{ lineHeight:"1.5", color:"rgb(56,59,80)", overflowWrap:"break-word", wordBreak:"keep-all"}}>루멘, 나나이트 그리고 더 많은 기술을 사용해 보실 준비가 되셨나요? 이번 UE5 빌드는 차세대 기술에 관심 있는 게임 개발자를 위한 빌드입니다. 지금 새로운 기능을 경험해 보고, 다음 차세대 게임을 프로토타이핑하고, 피드백을 공유해 주세요.</p>
+                            <p className="mainPage_5_news_box_content_more">더 알아보기</p>
+                        </div>
+                        <div style={{width:"48%", height:"100%",display:"flex", flexDirection:"column", textAlign:"left"}}>
+                        <p style={{ lineHeight:"0"}}>뉴스</p>
+                            <p className="mainPage_5_news_box_title">메타휴먼 크리에이터 얼리 액세스 출시!</p>
+                            <p style={{ lineHeight:"1.5", color:"rgb(56,59,80)", overflowWrap:"break-word", wordBreak:"keep-all"}}>메타휴먼 크리에이터를 경험하려고 기다리셨나요? 지금 바로 얼리 액세스를 신청하고 여러분 만의 특별한 고퀄리티의 디지털 휴먼을 몇 분 만에 제작해 보세요. 그리고 퀵셀 브리지에서 50가지의 메타휴먼 프리셋을 무료로 받아 보세요!</p>
+                            <p className="mainPage_5_news_box_content_more">액세스 신청하기</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div style={{background:"linear-gradient(to bottom right, #3a4ed5 0%, #3acfd5 100%)", width: "100%", height: "90vh", transition: "0.5s", opacity: scroll <= (changeH * 1.8) ? 0 : 1 }}>
+                <div style={{ display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
+                    <div style={{backgroundColor:"black", width:"100%", height:"70%",display:"flex",flexDirection:"column", justifyContent:"center"}}>
+                        <div style={{ backgroundColor:"white", width:"100%", height:"80%", display:"flex", flexDirection:"row", justifyContent:"center"}}>
+                            <div style={{ display:'flex', flexDirection:"column", justifyContent:"center", width:"100%"}}>
 
-            <article style={{ width: "100vw", height: "80vh", transition: "0.5s", opacity: scroll <= (changeH * 1.8) ? 0 : 1 }}>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
 
-            </article>
-            <div style={{ height: "100vh", width: "100vw" }}>
+                    </div>
 
+                </div>
             </div>
             {/* <article style={{ width: "100vw", height: "100vh", transition: "0.5s", opacity: (scroll - ((changeH * 4) * 0.5)) }}>
                     <h1>The HP Pavilion</h1>
