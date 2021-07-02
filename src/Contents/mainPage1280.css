@@ -1,0 +1,54 @@
+.mainPage1280_div_1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(32,36,55);
+    padding-top: 52px;
+}
+.img{
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.mainPage1280_div_1_text{
+    position: absolute;
+    z-index: 15;
+    color: white;
+    word-break: keep-all;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 80vh;
+}
+.mainPage1280_div_2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(219,222,227);
+    padding: 20px, 0px;
+}
+.mainPage1280_div_2_box{
+    width: 100%;
+    height: fit-content;
+}
+.mainPage1280_div_2_box2{
+    width: 90%;
+    height: fit-content;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(to bottom right,#95a2f5 0%, #6df5fa 100%);
+    border-image-slice: 1;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.mainPage1280_div_2_box3{
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(121, 99, 121);
+    
+}
+.mainPage1280_div_2_box2_title{
+    float: left;
+}

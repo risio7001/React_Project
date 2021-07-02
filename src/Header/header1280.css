@@ -1,7 +1,6 @@
 .header1280{
-    width: 100vw;
     height: 52px;
-    
+    overflow-x: hidden;
     background-color: rgb(32, 35, 55);
     position: absolute;
     display: flex;

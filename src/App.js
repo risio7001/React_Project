@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import MainPage from './Contents/mainPage'
+import MainPage1280 from './Contents/mainPage1280';
 import Header from './Header/header'
 import { isMobile, isBrowser } from 'react-device-detect';
 import Login from './Contents/login'
@@ -36,7 +37,7 @@ function App({props}) {
         return <>
           <Header1280 login={login}/>
           <Route exact path="/">
-            <MainPage />
+            <MainPage1280 />
           </Route>
           <Route exact path="/Login">
             <Login setLogin={setLogin}/>
@@ -115,7 +116,7 @@ function App({props}) {
         return <>
         <Header1280 login={login}/>
           <Route exact path="/">
-            <MainPage />
+            <MainPage1280 />
           </Route>
           <Route exact path="/Login">
             <Login setLogin={setLogin}/>

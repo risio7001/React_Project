@@ -16,7 +16,7 @@ function MainPage() {
     const [buttonOver, setButtonOver] = useState()
 
     function reSize() {
-        // console.log("sizeTest00 : " + size);
+        
         setSizeWidth(window.innerWidth);
     }
     useEffect(() => {
@@ -68,7 +68,7 @@ function MainPage() {
             {/* <div style={{ marginTop: "45vh", float: "left", transition: "0.4s", position: "absolute", zIndex: "4", width: "400px", height: "400px", backgroundColor: "black", opacity: ((changeH / 9) / scroll) - 1 }}></div> */}
             <div style={{ width: document.documentElement.clientWidth, height: "70vh", transition: "0.5s", backgroundColor: "rgb(219,222,227)", display: "flex", flexDirection: "column" }}>
                 <div style={{ width: "100%", height: "50%", opacity: scroll <= (changeH * 0.8) ? 0 : 1, transition: "0.5s", display:"flex", flexDirection:"column", justifyContent:"center" }}>
-                    <h1>무한의 창작</h1>
+                    <p style={{ fontSize:"55px", fontWeight:"100"}}>무한의 창작</p>
                     <div style={{width:"100%", height:"fit-content", display:"flex", flexDirection:"row", justifyContent:"center"}}>
                     <div style={{width:"70%"}}>언리얼 엔진을 사용하면 세계에서 가장 진보된 리얼타임 3D 제작 툴로 멋진 리얼타임 경험을 구현할 수 있습니다. 누구나 이용할 수 있는 무료 리소스와
                         영감을 주는 커뮤니티는 첫 번째 프로젝트부터 가장 까다로운 도전에 이르기까지 누구나 꿈을 이룰 수 있도록 지원합니다.</div>    
@@ -148,12 +148,42 @@ function MainPage() {
                     </div>
                 </div>
             </div>
-            <div style={{background:"linear-gradient(to bottom right, #3a4ed5 0%, #3acfd5 100%)", width: "100%", height: "90vh", transition: "0.5s", opacity: scroll <= (changeH * 1.8) ? 0 : 1 }}>
+            <div style={{background:"linear-gradient(to bottom right, #3a4ed5 0%, #3acfd5 100%)", width: "100%", height: "100vh", transition: "0.5s", opacity: scroll <= (changeH * 1.8) ? 0 : 1 }}>
                 <div style={{ display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
-                    <div style={{backgroundColor:"black", width:"100%", height:"70%",display:"flex",flexDirection:"column", justifyContent:"center"}}>
-                        <div style={{ backgroundColor:"white", width:"100%", height:"80%", display:"flex", flexDirection:"row", justifyContent:"center"}}>
-                            <div style={{ display:'flex', flexDirection:"column", justifyContent:"center", width:"100%"}}>
-
+                    <div style={{ width:"100%", height:"70%",display:"flex",flexDirection:"column", justifyContent:"center"}}>
+                        <div style={{  width:"100%", height:"70%", display:"flex", flexDirection:"row", justifyContent:"center"}}>
+                            <div style={{ maxWidth:"1500px", display:'flex', flexDirection:"row", justifyContent:"space-between", width:"80%"}}>
+                                <div style={{width:"30%"}}>
+                                    <p style={{float:"left", fontSize:"45px"}}>모든 기능이<br/>제공됩니다</p>
+                                </div>
+                                <div className="mainPage_6_box">
+                                    <p style={{fontWeight:"bold"}}>
+                                        언리얼 엔진을 다운로드하세요
+                                    </p>
+                                    <p style={{fontSize:"30px", float:"left", margintop:"100px"}}>
+                                        지금<br/>
+                                        다운로드하세요
+                                    </p>
+                                    <p style={{float:"left"}}>
+                                        얼리얼 엔진은 제작에 바로 사용할 수 있는<br/>
+                                        모든 기능과 풀 소스 코드 액세스를 무료로<br/>
+                                        제공합니다.
+                                    </p>
+                                </div>
+                                <div className="mainPage_6_box2">
+                                    <p style={{fontWeight:"bold"}}>
+                                        문의하세요
+                                    </p>
+                                    <p style={{fontSize:"30px", float:"left", margintop:"140px"}}>
+                                        맞춤형 라이선스
+                                    </p>
+                                    <p style={{float:"left"}}>
+                                        기술 지원, 맞춤형 조항 또는 에픽게임즈와<br/>
+                                        직접적인 연락이 필요하신가요?<br/>
+                                        엔터프라이즈 라이선스 또는 맞춤형 
+                                        솔루션을 문의하세요.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,6 +192,9 @@ function MainPage() {
                     </div>
 
                 </div>
+            </div>
+            <div style={{width:document.documentElement.clientWidth ,height:"80vh", backgroundColor:"rgb(56,59,80)" }}>
+
             </div>
             {/* <article style={{ width: "100vw", height: "100vh", transition: "0.5s", opacity: (scroll - ((changeH * 4) * 0.5)) }}>
                     <h1>The HP Pavilion</h1>

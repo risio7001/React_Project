@@ -71,7 +71,7 @@ function Header1280(login){
 
 
     return <>
-        <div className="header1280">
+        <div className="header1280" style={{width:document.documentElement.clientWidth}}>
             <div className="header1280_left"><Link to="/" onClick={categoryReset}><p style={{width:"100px",textAlign:"center", lineHeight:"3", margin:"0px", 
             height:"52", color: "white", fontWeight: "bold" }}>LOGO</p></Link></div>
             <div className="header1280_center"><p style={{ color: "white", fontWeight: "bold" }}>LOGO SECOND</p></div>
