@@ -22,7 +22,7 @@
 .mainPage1280_div_2{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     background-color: rgb(219,222,227);
     padding: 20px, 0px;
 }
