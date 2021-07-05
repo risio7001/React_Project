@@ -81,3 +81,10 @@
 .mainPage1280_div_2_box3_button:hover{
   box-shadow: 0px 0px 16px 10px rgba(0,0,255,0.24)
 }
+.mainPage1280_div_2_box4_news{
+    color: rgb(56,59,80);
+    font-size: 13px;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to bottom right,#3a4ed5 0%, #3acfd5 100%);
+    border-image-slice: 1;
+}

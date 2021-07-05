@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './mainPage1280.css';
 import backImg from '../Image/test3.png';
 import scroll_img from '../Image/scroll.png';
+import img1 from '../Image/test1.png';
+import img2 from '../Image/test2.png';
 
 
 function MainPage1280(){
@@ -79,6 +81,18 @@ function MainPage1280(){
                             지원 정보 보기
                             </div>
                         </div>
+                        <div className="mainPage1280_div_2_box2">
+                            <p style={{fontSize:"35px"}}>언리얼 엔진 최신 소식</p>
+                            <div style={{width:"fit-content", height:"fit-content"}}>
+                                <p style ={{color:"rgb(56,59,80)", fontSize:"13px", borderBottom:"3px solid"}}>
+                                모든 뉴스 & 이벤트 보기
+                                </p>
+                            </div>
+                            <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
+                                <img src={img1} style={{width:"100%", height:"30vh"}}/>
+                            </div>
+                        </div>
+
 
                     </div>
 
