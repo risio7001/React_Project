@@ -12,14 +12,12 @@
     overflow: hidden;
 }
 .mainPage1280_div_1_text{
-    position: absolute;
-    z-index: 15;
     color: white;
-    word-break: keep-all;
+    height: 100%;
+    padding-top: 70vh;
+    transition: 3s;
     font-size: 40px;
-    display: flex;
-    flex-direction: column-reverse;
-    height: 80vh;
+    word-break: keep-all;
 }
 .mainPage1280_div_2{
     position: relative;
@@ -33,14 +31,15 @@
     height: fit-content;
 }
 .mainPage1280_div_2_box2{
-    width: 90%;
+    width: 100%;
     height: fit-content;
-    border-top: 3px solid transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    border-top: 2px solid transparent;
     border-image: linear-gradient(to bottom right,#95a2f5 0%, #6df5fa 100%);
     border-image-slice: 1;
-    display: flex;
-    flex-direction: row;
-    
+    text-align: start;
 }
 
 .mainPage1280_div_2_box3{
@@ -51,4 +50,34 @@
 }
 .mainPage1280_div_2_box2_title{
     float: left;
+}
+.testOpacity{
+    background-color: red;
+}
+.mainPage_div_2_box3_subTitle{
+    margin: 0;
+    font-size: 25px;
+    transition: 0.5s;
+}
+.mainPage_div_2_box3_subContent{
+    color:rgb(56,59,80);
+    font-size: 16px;
+    word-break: keep-all;
+}
+.mainPage1280_div_2_box3_button{
+    border: 2px solid transparent;
+    color: rgb(56,59,80);
+    background-color: rgba(0,0,0,0);
+    line-height: 3;
+    width: 144px;
+    height: 40px;
+    font-size: 12px;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+    border-image: linear-gradient(to bottom right,#3a4ed5 0%, #3acfd5 100%);
+    border-image-slice: 1;
+}
+.mainPage1280_div_2_box3_button:hover{
+  box-shadow: 0px 0px 16px 10px rgba(0,0,255,0.24)
 }
