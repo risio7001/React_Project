@@ -24,7 +24,6 @@ const Info = (props) => {
                 // An error happened.
               });
         }
-
     }
     function logout(){
         Auth.signOut().then(() => {

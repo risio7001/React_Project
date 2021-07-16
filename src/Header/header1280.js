@@ -31,9 +31,6 @@ function Header1280(login){
     window.addEventListener('scroll', scrollHandler);
     return ()=>{window.removeEventListener('scroll', scrollHandler);}
     },[scrollHandler]);
-    const [on, setOn]= useState(false);
-    const [contentText, setContentText] = useState();
-    const [test1, setTest1]=useState(0);
     const [categoty, setCategory] = useState("container");
     const [categoryMore, setCategoryMore] = useState("categoryMore");
     const [categoryMore_Detail, setCategoryMore_Detail] = useState("categoryMore_Detail");

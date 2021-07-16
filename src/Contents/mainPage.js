@@ -123,11 +123,11 @@ function MainPage() {
                     </div>
                     <div style={{ display:"flex",flexDirection:"column",justifyContent:"center", width: "100%", height: "60%", opacity: scroll <= (changeH * 1.3) ? 0 : 1, transition: "0.5s" }}>
                         <div className="mainPage_5_img_box_top">
-                            <div style={{width:"48%", height:"100%"}}>
-                                <img src={img1} width="100%" height="100%"/>
+                            <div style={{width:"48%", height:"100%", overflow:"hidden"}}>
+                                <img src={img1} width="100%" height="100%" className="img1_hover"/>
                             </div>
-                            <div style={{width:"48%", height:"100%"}}>
-                            <img src={img2} width="100%" height="100%"/>
+                            <div style={{width:"48%", height:"100%", overflow:"hidden"}}>
+                                <img src={img2} width="100%" height="100%" className="img1_hover"/>
                             </div>
                         </div>
                     </div>
