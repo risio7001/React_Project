@@ -29,9 +29,9 @@ function MainPage1280(){
     return<>
     <div style={{width:document.documentElement.clientWidth, height:"fit-content"}}>
         <div className="mainPage1280_div_1" >
-            <div style={{backgroundImage:`url(${backImg})`, backgroundColor:"rgb(32,36,55)", width:"100vw", height:"100vh"}}>
-                <div style={{background:"linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(32,36,55,1) 100%)", width:"100%", height:"100%"}}>
-                    <p className="mainPage1280_div_1_text" style={{opacity:opa === undefined ? 0 : 1}}>
+            <div style={{backgroundImage:`url(${backImg})`, backgroundColor:"rgb(32,36,55)", width:document.documentElement.clientWidth, height:"100vh"}}>
+                <div style={{background:"linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(32,36,55,1) 100%)", width:document.documentElement.clientWidth, height:"100%"}}>
+                    <p className="mainPage1280_div_1_text" style={{width:document.documentElement.clientWidth, opacity:opa === undefined ? 0 : 1}}>
                         세계에서 가장 개방적이고 진보된 리얼타임 3D 제작 툴
                     </p>
                 </div>

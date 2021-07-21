@@ -198,7 +198,7 @@ function App({props}) {
   }, [reSize]);
 
   return (
-    <div className="App" >
+    <div className="App" style={{width:document.documentElement.clientWidth}}>
           <BrowserRouter>
             {headerSet()}
             {/* <Header size={size}/> */}

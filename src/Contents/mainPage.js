@@ -3,6 +3,7 @@ import './mainPage.css';
 import video1 from '../Image/mainvideo2.mp4';
 import img1 from '../Image/test1.png';
 import img2 from '../Image/test2.png';
+import Select from 'react-select';
 
 function MainPage() {
     const [changeW, setChangeW] = useState(window.innerWidth);
@@ -13,7 +14,17 @@ function MainPage() {
     const [opacityStart, setOpacityStart] = useState("");
     const [size, setSize] = useState("30vh");
     const [sizeWidth, setSizeWidth] = useState(window.innerWidth);
-    const [buttonOver, setButtonOver] = useState()
+        
+    const options = [
+        // { value: '산업선택', label: '산업선택' },
+        { value: 'Advertising & Marketing', label: 'Advertising & Marketing' },
+        { value: 'Aerospace', label: 'Aerospace' },
+        { value: 'Broadcast & Live Events', label: 'Broadcast & Live Events' },
+        { value: 'Education', label: 'Education' },
+        { value: 'Games', label: 'Games' },
+        { value: 'Other', label: 'Other' }
+    ]
+    
 
     function reSize() {
         
@@ -148,11 +159,11 @@ function MainPage() {
                     </div>
                 </div>
             </div>
-            <div style={{background:"linear-gradient(to bottom right, #3a4ed5 0%, #3acfd5 100%)", width: "100%", height: "100vh", transition: "0.5s", opacity: scroll <= (changeH * 1.8) ? 0 : 1 }}>
+            <div style={{background:"linear-gradient(to bottom right, #3a4ed5 0%, #3acfd5 100%)", width: "100%", height: "fit-content", transition: "0.5s", opacity: scroll <= (changeH * 1.8) ? 0 : 1 }}>
                 <div style={{ display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
                     <div style={{ width:"100%", height:"70%",display:"flex",flexDirection:"column", justifyContent:"center"}}>
                         <div style={{  width:"100%", height:"70%", display:"flex", flexDirection:"row", justifyContent:"center"}}>
-                            <div style={{ maxWidth:"1500px", display:'flex', flexDirection:"row", justifyContent:"space-between", width:"80%"}}>
+                            <div style={{ maxWidth:"1500px", display:'flex',padding:"100px", flexDirection:"row", justifyContent:"space-between", width:"80%"}}>
                                 <div style={{width:"30%"}}>
                                     <p style={{float:"left", fontSize:"45px"}}>모든 기능이<br/>제공됩니다</p>
                                 </div>
@@ -186,6 +197,53 @@ function MainPage() {
                                 </div>
                             </div>
                         </div>
+                       <div style={{width:"100%", height:"400px", display:"flex", flexDirection:"column"}}>
+                            <div style={{width: "100%", height: "fit-content", display:"flex", flexDirection:"row",
+                            justifyContent:"center" }}>
+                                <div style={{zIndex:"1000", maxWidth:"1500px", width:"80%", maxHeight:"400px", minHeight:"400px", height:"400px", backgroundColor:"white" }}>
+                                    
+                                    <div>
+                                        <p style={{fontSize:"16px", fontWeight:"bold"}}>뉴스레터</p>
+                                    </div>
+                                    <div>
+                                        <p style={{fontSize:"34px", fontWeight:"300", wordBreak:"keep-all"}}>
+                                        업계 혁신과 무료 에셋에 대한 최신 정보를 받아보세요 
+                                        </p>
+                                    </div>
+                                    <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
+                                        <div style={{justifyContent:"center", width:"40%"}}>
+                                            <Select
+                                                style={{}}
+                                                options={options}
+                                                placeholder="산업선택"
+                                                // defaultValue={options[0]}
+                                                />
+                                                
+                                        </div>
+                                    </div>
+                                    <div style={{display:"flex", flexDirection:"row", justifyContent:"center", padding:"10px"}}>
+                                            <div>
+                                                <input type="email"
+                                                 style={{width:"300px", height:"50px", border:"none", borderRadius:"0px", fontSize:"20px", backgroundColor:"rgb(236,239,242)"}}
+                                                 placeholder="email*"
+                                                 ></input>
+                                            </div>
+                                            <div style={{width:"100px", height:"50px",fontSize:"13px", textAlign:"center",lineHeight:"4", background:"linear-gradient(to bottom right, #3a4ed5 0%, #3acfd5 100%)"}}>
+                                                구독하기
+                                            </div>
+                                    </div>
+                                    <div>
+                                        <p style={{fontSize:"14px"}}>
+                                            언리얼 엔진 및 에픽게임즈의 뉴스, 설문조사, 행사 및 이벤트 정보 수신에 동의합니다.
+                                        </p>
+                                        <p style={{color:"blue", fontSize:"14px"}}>
+                                            개인정보 취급방침
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>    
                     </div>
                     <div>
 
@@ -193,7 +251,7 @@ function MainPage() {
 
                 </div>
             </div>
-            <div style={{width:document.documentElement.clientWidth ,height:"80vh", backgroundColor:"rgb(56,59,80)" }}>
+            <div style={{width:document.documentElement.clientWidth ,height:"80vh", marginTop:"-200px", backgroundColor:"rgb(32,35,55)" }}>
 
             </div>
             {/* <article style={{ width: "100vw", height: "100vh", transition: "0.5s", opacity: (scroll - ((changeH * 4) * 0.5)) }}>
