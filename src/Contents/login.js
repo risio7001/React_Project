@@ -11,12 +11,15 @@ function Login(props){
     function onSubmit(event){
         if(id === ""){
             alert("이메일을 입력해주세요.");
+            return;
         }
         else if(pass === ""){
             alert("비밀번호를 입력해주세요.");
+            return;
         }
         else if(pass.length <= 5){
             alert("비밀번호를 6자리 이상 입력해주세요.");
+            return;
         }
         Auth.signInWithEmailAndPassword(id, pass)
             .then((userCredential) => {

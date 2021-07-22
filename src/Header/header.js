@@ -38,7 +38,7 @@ function Header({login}){
     const [test1, setTest1]=useState(0);
 
     return <>
-            <div className="headerStyle" >
+            <div className="headerStyle" style={{width:document.documentElement.clientWidth}}>
             <div className="leftHeader">
             <Link to="/">
             <div className="logo">

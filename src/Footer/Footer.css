@@ -1,8 +1,10 @@
-.footer{
-    width: 100%;
-    background-color: salmon;
-    height: 100vh;
-    position: absolute;
-    bottom: 0px;
-    z-index: 100000;
+.footer_menu_font{
+    font-size: 15px;
+    margin: 5px 0;
+}
+.footer_menu_title{
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(204, 204, 204);
 }

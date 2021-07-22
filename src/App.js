@@ -69,6 +69,7 @@ function App({props}) {
           <Route exact path="/Info">
             <Info setLogin={setLogin}/>
           </Route>
+        <Footer/>
         </>
       }
       else {
@@ -107,6 +108,7 @@ function App({props}) {
           <Route exact path="/Info">
             <Info setLogin={setLogin}/>
           </Route>
+        <Footer/>
         </>
       }
     }
@@ -148,6 +150,7 @@ function App({props}) {
           <Route exact path="/Info">
             <Info setLogin={setLogin}/>
           </Route>
+        <Footer/>
         </>
       }
       else {
@@ -186,6 +189,7 @@ function App({props}) {
           <Route exact path="/Info">
             <Info setLogin={setLogin}/>
           </Route>
+        <Footer/>
         </>
       }
     }
@@ -198,7 +202,7 @@ function App({props}) {
   }, [reSize]);
 
   return (
-    <div className="App" style={{width:document.documentElement.clientWidth}}>
+    <div className="App" style={{width:"fit-content", padding:"0px 0px"}}>
           <BrowserRouter>
             {headerSet()}
             {/* <Header size={size}/> */}
