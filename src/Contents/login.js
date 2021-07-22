@@ -54,10 +54,9 @@ function Login(props){
     }
 
     function sendName (user){
-        console.log("user Info : " + user)
         DB.collection("u_info").doc(user.uid).get().then((doc) => {
             if (doc.exists) {
-                console.log("Document data:", doc.data().name);
+                
                 props.setLogin(doc.data().name);
                 alert("로그인 성공 ");
                 history.push("/");
