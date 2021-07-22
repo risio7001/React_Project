@@ -42,9 +42,6 @@ function MainPage() {
         setChangeH(window.innerHeight);
         setScroll(window.scrollY);
         setHundred((100 - (((scroll * 1.2) / (changeH * 2)) * 100)) / 100);
-
-        // console.log("Opacity Test : " + (1-(scroll/(changeH*0.3))) + "%" );
-
         setOpacityStart(`${((changeH * 2) * (2 / 3)) / (scroll * 2)}`); // 최상단 이미지 투명도
     }
     useEffect(() => {                             // 현재 스크롤값 구하고 스크롤값이 변할때마다 값 수정.
@@ -58,7 +55,7 @@ function MainPage() {
         <div style={{ position: "relative",width: document.documentElement.clientWidth, zIndex: "1", backgroundColor: "rgb(32,35,55)" }}>
             <div style={{ width: document.documentElement.clientWidth, height: (window.innerHeight) * 1.5, display: "flex", justifyContent: "center", margin: "0px" }}>
                 <div style={{
-                    position: "sticky", top: "0px", width: document.documentElement.clientWidth, height: "100vh", transform: hundred < -1 ? "scale(0)" : `scale(${hundred})`,
+                    position: "sticky", top: "0px", width: document.documentElement.clientWidth, height: "100vh", transform: hundred < -1 ? "scale(0)" : window.scrollY === 0 ? 'scale(1)' : `scale(${hundred})`,
                     transition: "0.2s", backgroundColor: "grey", opacity: hundred
                 }}>
                     <video src={video1} muted autoPlay loop style={{ width: "100%", height: "100%", objectFit: "fill" }}></video>

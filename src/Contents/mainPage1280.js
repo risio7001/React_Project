@@ -91,6 +91,18 @@ function MainPage1280(){
                             <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
                                 <img src={img1} style={{width:"100%", height:"30vh"}}/>
                             </div>
+                            <div style={{padding:"24px 0px", width:"fit-content", height:"fit-content"}}>
+                                <div style={{padding:"8px 0px", fontSize:"16px", fontWeight:"bold"}}>
+                                    뉴스
+                                </div>
+                                <div style={{padding:"8px 0px", fontSize:"22px", fontWeight:"400"}}>
+                                    언리얼 엔진 5 얼리 액세스 출시!
+                                </div>
+                                <div style={{lineHeight:"30px", color:"rgb(56,59,80)"}}>
+                                루멘, 나나이트 그리고 더 많은 기술을 사용해 보실 준비가 되셨나요? 이번 UE5 빌드는 차세대 기술에 관심 있는 게임 개발자를 위한 빌드입니다. 지금 새로운 기능을 경험해 보고, 다음 차세대 게임을 프로토타이핑하고, 피드백을 공유해 주세요.
+                                </div>
+                                <div>더 알아보기</div>
+                            </div>
                         </div>
 
 
