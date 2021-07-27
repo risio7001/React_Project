@@ -27,7 +27,6 @@ function MainPage() {
     
 
     function reSize() {
-        
         setSizeWidth(window.innerWidth);
     }
     useEffect(() => {
@@ -213,7 +212,6 @@ function MainPage() {
                                                 style={{}}
                                                 options={options}
                                                 placeholder="산업선택"
-                                                // defaultValue={options[0]}
                                                 />
                                                 
                                         </div>
