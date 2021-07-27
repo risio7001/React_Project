@@ -13,3 +13,36 @@
 .footer_menu_font:hover{
     color:rgb(0,157,223);
 }
+.footer_menu_container{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 32px;
+}
+.footer_menu_container_600{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
+}
+
+.footer_menu_flow{
+    margin-right: 30px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+}
+.footer_menu_flow_600{
+    margin-right: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    color: white;
+    padding-bottom: 32px;
+}
