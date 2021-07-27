@@ -10,9 +10,12 @@ function MainPage1280(){
     const [topImg, setTopImg]= useState();
     const [scroll, setScroll] = useState()
     const [opa, setOpa]=useState();
+    const [changeH, setChangeH] = useState(window.innerHeight);
 
     const scrollHandler = () => {
         setTopImg((window.innerHeight - (window.scrollY*2))/1000);
+        setScroll(window.scrollY);
+        setChangeH(window.innerHeight);
     }
 
     useEffect(()=>{
@@ -98,8 +101,11 @@ function MainPage1280(){
                                 모든 뉴스 & 이벤트 보기
                                 </p>
                             </div>
-                            <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
-                                <img src={img1} style={{width:"100%", height:"30vh"}}/>
+                            <div style={{borderBottom:"1px solid black", marginBottom:"24px", width:"100%"}}>
+
+                            </div>
+                            <div style={{display:"flex", flexDirection:"row", justifyContent:"center", overflow:"hidden"}}>
+                                <img src={img1} style={{width:"100%", height:"30vh"}} className="img2_hover"/>
                             </div>
                             <div style={{padding:"24px 0px", width:"fit-content", height:"fit-content"}}>
                                 <div style={{padding:"8px 0px", fontSize:"16px", fontWeight:"bold"}}>
@@ -114,9 +120,34 @@ function MainPage1280(){
                                 <div style={{ width:"fit-content", height:"fit-content", padding:"16px 0px", fontSize:"13px", letterSpacing:"2px"}}>더 알아보기
                                 <hr style={{height:"3px", backgroundColor:"blue", border:"none"}}></hr></div>
                             </div>
+
+
+                            <div style={{display:"flex", flexDirection:"row", justifyContent:"center", overflow:"hidden"}}>
+                                <img src={img2} style={{width:"100%", height:"30vh"}} className="img2_hover"/>
+                            </div>
+                            <div style={{padding:"24px 0px", width:"fit-content", height:"fit-content"}}>
+                                <div style={{padding:"8px 0px", fontSize:"16px", fontWeight:"bold"}}>
+                                    뉴스
+                                </div>
+                                <div style={{padding:"8px 0px", fontSize:"22px", fontWeight:"400"}}>
+                                    메타휴먼 크리에이터 얼리 액세스 출시!
+                                </div>
+                                <div style={{lineHeight:"30px", color:"rgb(56,59,80)"}}>
+                                메타휴먼 크리에이터를 경험하려고 기다리셨나요? 지금 바로 얼리 액세스를 신청하고 여러분 만의 특별한 고퀄리티의 디지털 휴먼을 몇 분 만에 제작해 보세요. 그리고 퀵셀 브리지에서 50가지의 메타휴먼 프리셋을 무료로 받아 보세요!
+                                </div>
+                                <div style={{ width:"fit-content", height:"fit-content", padding:"16px 0px", fontSize:"13px", letterSpacing:"2px"}}>더 알아보기
+                                <hr style={{height:"3px", backgroundColor:"blue", border:"none"}}></hr></div>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
+                <div style={{background:"linear-gradient(to bottom right, #3a4ed5 0%, #3acfd5 100%)", width: "100%", height: "400px", transition: "0.5s", opacity: scroll <= (changeH * 1.8) ? 0 : 1 }}>
+
+                </div>
+    <div style={{position:"absolute",zIndex:"15000",  width:"100vw", height:"400px", backgroundColor:"white"}}>
+
+    </div>
         </div>
     </div>
     </>

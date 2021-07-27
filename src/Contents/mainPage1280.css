@@ -41,6 +41,12 @@
     border-image-slice: 1;
     text-align: start;
 }
+.img2_hover:hover{
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+.img2_hover{
+    transition:0.2s;
+}
 
 .mainPage1280_div_2_box3{
     width: 100%;
