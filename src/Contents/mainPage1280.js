@@ -25,9 +25,19 @@ function MainPage1280(){
             window.removeEventListener('scroll', scrollHandler)
         }
     },[scrollHandler]);
+
+    const [resize, setResize]=useState(document.documentElement.clientWidth);
+    const resizing = ()=>{
+        setResize(document.documentElement.clientWidth);
+    }
+
+    useEffect(()=>{
+        window.addEventListener('resize', resizing);
+        return ()=>{window.removeEventListener('resize', resizing)}
+    },[resizing]);
     
     return<>
-    <div style={{width:document.documentElement.clientWidth, height:"fit-content"}}>
+    <div style={{width:resize === undefined ? document.documentElement.clientWidth : resize, height:"fit-content"}}>
         <div className="mainPage1280_div_1" >
             <div style={{backgroundImage:`url(${backImg})`, backgroundColor:"rgb(32,36,55)", width:document.documentElement.clientWidth, height:"100vh"}}>
                 <div style={{background:"linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(32,36,55,1) 100%)", width:document.documentElement.clientWidth, height:"100%"}}>
@@ -101,13 +111,11 @@ function MainPage1280(){
                                 <div style={{lineHeight:"30px", color:"rgb(56,59,80)"}}>
                                 루멘, 나나이트 그리고 더 많은 기술을 사용해 보실 준비가 되셨나요? 이번 UE5 빌드는 차세대 기술에 관심 있는 게임 개발자를 위한 빌드입니다. 지금 새로운 기능을 경험해 보고, 다음 차세대 게임을 프로토타이핑하고, 피드백을 공유해 주세요.
                                 </div>
-                                <div>더 알아보기</div>
+                                <div style={{ width:"fit-content", height:"fit-content", padding:"16px 0px", fontSize:"13px", letterSpacing:"2px"}}>더 알아보기
+                                <hr style={{height:"3px", backgroundColor:"blue", border:"none"}}></hr></div>
                             </div>
                         </div>
-
-
                     </div>
-
                 </div>
         </div>
     </div>

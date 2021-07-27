@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import '../Footer/Footer.css';
 
 function Footer(){
+    const [resizing, setResizing] = useState(document.documentElement.clientWidth);
+    const resize = ()=>{
+        setResizing(document.documentElement.clientWidth);
+    }
+
+    useEffect(()=>{
+        window.addEventListener('resize', resize);
+        return ()=>{window.removeEventListener('resize', resize); }
+    },[resize]);
 
     return <>
         <div style={{
-            width: "fit-content", height: "fit-content", backgroundColor: "rgb(32,35,55)",
+            width: "fit-content", height: "fit-content", backgroundColor: "rgb(32,35,55)",overflowX:"hidden",
             position: "absolute", padding: "64px 0px", color: "white"
         }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-                <div style={{ width: document.documentElement.clientWidth, display: "flex", flexDirection: "row", justifyContent: "center" }}>
+                <div style={{ width: resizing === undefined ? document.documentElement.clientWidth : resizing, display: "flex", flexDirection: "row", justifyContent: "center" }}>
                     <div style={{width:"80%", height:"fit-content", display: "flex", flexDirection: "row", paddingBottom:"32px"}}>
                         <div style={{marginRight:"30px", textAlign:"start", display:"flex", flexDirection:"column", width:"fit-content", height:"fit-content", color:"white"}}>
                         <p className="footer_menu_title">게임 개발사</p>
@@ -45,7 +54,7 @@ function Footer(){
                     </div>
                 </div>
 
-                <div style={{ width: document.documentElement.clientWidth, display: "flex", flexDirection: "row", justifyContent: "center" }}>
+                <div style={{ width: resizing === undefined ? document.documentElement.clientWidth : resizing, display: "flex", flexDirection: "row", justifyContent: "center" }}>
                     <div style={{ padding: "15px", textAlign: "start", width: "80%", height: "fit-content", borderTop: "2px solid rgb(56,59,80)", fontSize: "12px", fontWeight: "400" }}>
                         © 2004-2021, Epic Games, Inc. All Rights Reserved. Unreal 및 그 로고의 저작권은 Epic Games, Inc. 에 있으며, 이는 미국 및 그 외 국가에 모두 해당됩니다.
                         <div style={{ display: "flex", flexDirection: "row", textAlign: "start" }}>

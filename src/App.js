@@ -21,9 +21,6 @@ import Info from './Contents/info'
 function App({props}) {
   const [login, setLogin]=useState();
   const [size, setSize] = useState();
-  if(isMobile){
-    alert("모바일 화면으로 제공됩니다.");
-  }
   function reSize() {
     if(window.innerWidth <=1280){
       setSize(true);
@@ -72,6 +69,7 @@ function App({props}) {
           <Route exact path="/Info">
             <Info setLogin={setLogin}/>
           </Route>
+        <Footer/>
         </>
       }
       else {
@@ -116,6 +114,9 @@ function App({props}) {
     }
     // 처음 페이지를 켰을때
     else {
+      if (isMobile) {
+        alert("모바일 화면으로 제공됩니다.");
+      }
       if (window.innerWidth <= 1280) {
         return <>
         <Header1280 login={login}/>
@@ -152,6 +153,7 @@ function App({props}) {
           <Route exact path="/Info">
             <Info setLogin={setLogin}/>
           </Route>
+        <Footer/>
         </>
       }
       else {
