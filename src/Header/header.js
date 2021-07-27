@@ -37,8 +37,18 @@ function Header({login}){
     const [contentText, setContentText] = useState();
     const [test1, setTest1]=useState(0);
 
+    const [resizing, setResizing] = useState(document.documentElement.clientWidth);
+    const resize = ()=>{
+        setResizing(document.documentElement.clientWidth);
+    }
+
+    useEffect(()=>{
+        window.addEventListener('resize', resize);
+        return ()=>{window.removeEventListener('resize', resize); }
+    },[resize]);
+
     return <>
-            <div className="headerStyle" style={{width:document.documentElement.clientWidth}}>
+            <div className="headerStyle" style={{width:resizing === undefined ? document.documentElement.clientWidth : resizing}}>
             <div className="leftHeader">
             <Link to="/">
             <div className="logo">

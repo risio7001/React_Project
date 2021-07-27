@@ -65,10 +65,18 @@ function Header1280(login){
             setCategoryMore_Detail("categoryMore_Detail");
         }
     }
+    const [resizing, setResizing] = useState(document.documentElement.clientWidth);
+    const resize = ()=>{
+        setResizing(document.documentElement.clientWidth);
+    }
 
+    useEffect(()=>{
+        window.addEventListener('resize', resize);
+        return ()=>{window.removeEventListener('resize', resize); }
+    },[resize]);
 
     return <>
-        <div className="header1280" style={{width:document.documentElement.clientWidth}}>
+        <div className="header1280" style={{width:resizing===undefined?document.documentElement.clientWidth : resizing}}>
             <div className="header1280_left"><Link to="/" onClick={categoryReset}><p style={{width:"100px",textAlign:"center", lineHeight:"3", margin:"0px", 
             height:"52", color: "white", fontWeight: "bold" }}>LOGO</p></Link></div>
             <div className="header1280_center"><p style={{ color: "white", fontWeight: "bold" }}>LOGO SECOND</p></div>
@@ -110,7 +118,7 @@ function Header1280(login){
         </div>
         
         <div  style={{position:"absolute", zIndex:4502, marginTop:"52px", overflowX:"hidden", marginLeft:categoryMore_Detail === "change_categotyMore_Detail" ? "0%":"100%", 
-    transition:"0.3s", width:categoryMore_Detail==="change_categotyMore_Detail" ? "100vw":"0px", float:"right", display:"flex", flexDirection:"row"}}>
+        transition:"0.3s", width:categoryMore_Detail==="change_categotyMore_Detail" ? "100vw":"0px", float:"right", display:"flex", flexDirection:"row"}}>
             <div style={{position:"relative", zIndex:4503, width:"100px", height:"1px"}}>
 
             </div>
