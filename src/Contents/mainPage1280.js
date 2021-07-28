@@ -4,7 +4,7 @@ import backImg from '../Image/test3.png';
 import scroll_img from '../Image/scroll.png';
 import img1 from '../Image/test1.png';
 import img2 from '../Image/test2.png';
-
+import Select from 'react-select';
 
 function MainPage1280(){
     const [topImg, setTopImg]= useState();
@@ -38,6 +38,16 @@ function MainPage1280(){
         window.addEventListener('resize', resizing);
         return ()=>{window.removeEventListener('resize', resizing)}
     },[resizing]);
+
+    const options = [
+        // { value: '산업선택', label: '산업선택' },
+        { value: 'Advertising & Marketing', label: 'Advertising & Marketing' },
+        { value: 'Aerospace', label: 'Aerospace' },
+        { value: 'Broadcast & Live Events', label: 'Broadcast & Live Events' },
+        { value: 'Education', label: 'Education' },
+        { value: 'Games', label: 'Games' },
+        { value: 'Other', label: 'Other' }
+    ]
     
     return<>
     <div style={{width:resize === undefined ? document.documentElement.clientWidth : resize, height:"fit-content"}}>
@@ -139,15 +149,75 @@ function MainPage1280(){
                                 <hr style={{height:"3px", backgroundColor:"blue", border:"none"}}></hr></div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
-                <div style={{background:"linear-gradient(to bottom right, #3a4ed5 0%, #3acfd5 100%)", width: "100%", height: "400px", transition: "0.5s", opacity: scroll <= (changeH * 1.8) ? 0 : 1 }}>
 
+                <div style={{ background: "linear-gradient(to bottom right, #3a4ed5 0%, #3acfd5 100%)", width: "100%", transition: "0.5s", 
+                            opacity: scroll <= (changeH * 1.8) ? 0 : 1 }}>
+                    <h2 style={{ fontWeight: "300", paddingTop: "24px", fontSize: "36px", wordBreak: "keep-all" }}>모든 기능이 제공됩니다</h2>
+                    
+                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", width:"100%" }}>
+                        <div style={{display:"flex", flexDirection:"column", width:"90%"}}>
+                            
+                            <div style={{ backgroundColor: "rgba(0,0,0,0)", border: "4px solid white", width: "100%", textAlign:"left" }}>
+                                <p style={{ padding:"0px 16px"}}>언리얼 엔진을 다운로드하세요</p>
+                                <h2 style={{ fontWeight: "300", padding:"16px 16px 0px 16px", fontSize: "32px", wordBreak: "keep-all" }}>지금 다운로드하세요</h2>
+                                <p style={{wordBreak: "keep-all", padding:"0px 16px", lineHeight:"30px"}}>얼리얼 엔진은 제작에 바로 사용할 수 있는 모든 기능과 풀 소스 코드 액세스를 무료로 제공합니다.</p>
+                            </div>
+
+                            <div style={{height:"24px", backgroundColor:"rgba(0,0,0,0)"}}></div>
+
+                            <div style={{ backgroundColor: "rgba(0,0,0,0)", border: "4px solid white", width: "100%", textAlign:"left" }}>
+                                <p style={{ padding:"0px 16px"}}>언리얼 엔진을 다운로드하세요</p>
+                                <h2 style={{ fontWeight: "300", padding:"16px 16px", fontSize: "32px", wordBreak: "keep-all" }}>지금 다운로드하세요</h2>
+                                <p style={{wordBreak: "keep-all", padding:"0px 16px", lineHeight:"30px"}}>
+                                기술 지원, 맞춤형 조항 또는 에픽게임즈와 직접적인 연락이 필요하신가요? 엔터프라이즈 라이선스 또는 맞춤형 솔루션을 문의하세요.
+                                </p>
+                            </div>
+
+                            <div style={{height:"56px"}}></div>
+
+                            <div style={{position:"relative",zIndex:"15000", backgroundColor:"white", width:"100%", height:"400px"}}>
+                                <h4 style={{fontWeight:"600", fontSize:"16px"}}>뉴스레터</h4>
+                                <h2 style={{padding:"0px 8px", fontSize:"30px",wordBreak:"keep-all", lineHeight:"38px", fontWeight:"300"}}>
+                                    업계 혁신과 무료 에셋에 대한 최신 정보를 받아보세요 
+                                    </h2>
+                                <div style={{width:"100%",display:"flex", flexDirection:"row", justifyContent:"center"}}>
+                                    <div style={{width:"40%"}}>
+                                        <Select
+                                            options={options}
+                                            placeholder="산업선택"
+                                            />
+                                    </div>
+                                </div>
+                                <div style={{width:"100%", display: "flex", flexDirection: "row", justifyContent: "center"}}>
+                                    <div style={{width:"70%", display:"flex", flexDirection:"column", paddingTop:"8px"}}>
+                                        <div style={{ width:"100%"}}>
+                                            <input type="email"
+                                                style={{padding:"0", width: "100%", height: "50px", border: "none", borderRadius: "0px", fontSize: "20px", backgroundColor: "rgb(236,239,242)" }}
+                                                placeholder="email*"
+                                            ></input>
+                                        </div>
+                                        <div style={{ width: "100%", height: "50px", fontSize: "13px", textAlign: "center", lineHeight: "4", background: "linear-gradient(to bottom right, #3a4ed5 0%, #3acfd5 100%)" }}>
+                                            구독하기
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style={{padding:"0px 8px"}}>
+                                    <p style={{ fontSize: "14px" }}>
+                                        언리얼 엔진 및 에픽게임즈의 뉴스, 설문조사, 행사 및 이벤트 정보 수신에 동의합니다.
+                                    </p>
+                                    <p style={{ color: "blue", fontSize: "14px" }}>
+                                        개인정보 취급방침
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{marginTop:"-200px", backgroundColor: "rgb(32, 35, 55)", width:"100%", height:"200px"}}>
+
+                    </div>
                 </div>
-    <div style={{position:"absolute",zIndex:"15000",  width:"100vw", height:"400px", backgroundColor:"white"}}>
-
-    </div>
         </div>
     </div>
     </>
